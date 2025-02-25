@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio google</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;  
+        }
+
+        /* Encabezado */
+
+        header{
+            margin: 20px 32px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            column-gap: 20px;
+        }
+
+        header ul li a {
+            display: flex;
+            color: #000000;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        header ul li:nth-child(3) img {
+            width: 30px;
+        }
+
+        header ul li:last-child a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Sección del buscador */
+
+        main {
+            display: grid;
+            place-items: center;
+        }
+
+        .container-form {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+            min-width: 300px;
+            width: 100%;
+            max-width: 584px;
+            padding: 32px 16px;
+        }
+
+        main section img {
+            width: 300px;
+            height: auto;
+        }
+
+        /* Estilos para el formulario */
+
+        main > section form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 36px;
+            margin: 0 16px;
+            width: 100%;
+        }
+
+        .bar-search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #eeedf0;
+            width: 100%;
+            border-radius: 24px;
+        }
+
+        .bar-search img {
+            width: 20px;
+            height: 20px;
+            margin: 0 12px;
+        }
+
+        .bar-search input {
+            border: none;
+            padding: 12px 16px;
+            font-size: 18px;
+            outline: none;
+            width: inherit;
+            &:focus {
+                border: 0px;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .buttons input[type="submit"] { 
+            padding: 12px 24px;
+            font-size: 14px;
+            color: rgb(67, 67, 67);
+            background-color: #eeedf0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* footer */
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 32px;
+            height: 80px;
+            background-color: #eeedf0;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu ul li a {
+            color: rgb(67, 67, 67);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .menu ul {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main section img {
+                width: 240px;
+            }
+            footer {
+                height: 150px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Imágenes</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./img/icon-grid.svg" alt="aplicaciones de google"></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./img/IMG_20240731_165222.jpg" alt="perfil"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="container-form">
+                <img src="./img/google-logo.png" alt="logo de google">
+                <form action="">
+                    <div class="bar-search">
+                        <img src="./img/lupa.svg" alt="lupa">
+                        <input type="text" name="buscador" id="buscador">
+                        <img src="./img/voice-search.svg" alt="asistente de voz">
+                    </div>
+                    <div class="buttons">
+                        <input type="submit" value="Buscar con Google">
+                        <input type="submit" value="I'm Feeling Lucky">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <section class="menu menu-left">
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Publicidad</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Negocios</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Acerca de</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Cómo funciona la Busqueda</a></li>
+                </ul>
+            </section>
+            <section class="menu menu-right">
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Privacidad</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Condiciones</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Preferencias</a></li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
